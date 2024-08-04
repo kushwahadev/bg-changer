@@ -49,6 +49,7 @@ export default function App() {
       color += letters[Math.floor(Math.random() * 16)];
     }
     setRandomBackground(color);
+    getAlign();
   };
   return (
     <>
@@ -62,7 +63,7 @@ export default function App() {
             justifyContent: justifyContent,
           },
         ]}>
-        <TouchableOpacity onPress={generateRandomColor} onPressOut={getAlign}>
+        <TouchableOpacity onPress={generateRandomColor}>
           <View style={[styles.actionBtn]}>
             <Text style={[styles.actionBtnText]}>Press ME</Text>
           </View>
